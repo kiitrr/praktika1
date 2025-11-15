@@ -15,6 +15,12 @@
 *   Создание быстрых очередей сообщений.
 
 ---
+docker run -d \
+  --name my-secure-redis \
+  -p 6380:6379 \
+  -e REDIS_PASSWORD="my_secure_password" \
+  -e REDIS_MAXMEMORY="512mb" \
+  redis:latest
 
 ## Поддерживаемые аргументы образа (Environment Variables)
 
